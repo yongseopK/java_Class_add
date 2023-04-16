@@ -2,18 +2,17 @@
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GraphicsEnvironment;
+
 import java.awt.Point;
 import java.awt.event.*;
 import java.io.*;
-import java.net.URL;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.swing.*;
-import javax.swing.event.UndoableEditEvent;
-import javax.swing.event.UndoableEditListener;
-import javax.swing.undo.CannotUndoException;
-import javax.swing.undo.UndoManager;
+import javax.swing.event.*;
+import javax.swing.undo.*;
 
 public class MemoMain extends JFrame implements ActionListener, UndoableEditListener {
 	JTextArea ta;
@@ -309,8 +308,7 @@ public class MemoMain extends JFrame implements ActionListener, UndoableEditList
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
-					final ImageIcon icon = new ImageIcon(new URL(
-							"https://postfiles.pstatic.net/MjAyMDEwMDNfOTUg/MDAxNjAxNjY0NjUzMjcz.ujdXtm4xse6uqrkrSBU7_RV0lgtubqURsqO0yhkU_SEg.GwRSl8pKq-Aajn28-a8Ad9CGBgMP6MeJuVz5zzscaGAg.JPEG.psg8075/%EC%97%84.jpg?type=w773"));
+					final ImageIcon icon = new ImageIcon("src/images/umm.jpeg");
 					JOptionPane.showMessageDialog(null,
 							"Yongseop's Memojang.\n Windows 메모장을 클론코딩하여 제작했습니다. \n 기능은 Windows 메모장과 유사합니다. \n Version : 1.0.0 \n Application By. Yongseop Company\n\n\n\n\n ※해당 프로그램을 무단 복제/판매 시 처벌됩니다. ",
 							"자기소개",
@@ -402,7 +400,7 @@ public class MemoMain extends JFrame implements ActionListener, UndoableEditList
 	}
 
 	void quit() {
-		
+
 		System.exit(0);
 	}
 
